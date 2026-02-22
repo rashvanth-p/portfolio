@@ -415,57 +415,294 @@ p {
 
 
 /* =====================================================
-   DEVICE MEDIA QUERIES (ADDED ONLY – NO CSS CHANGED)
+   DEVICE MEDIA QUERIES (RESPONSIVE ADJUSTMENTS)
+   Mobile | Tablet | Laptop | Desktop
    ===================================================== */
 
-/* MOBILE (phones) */
+/* MOBILE (phones) - Extra Small Screens */
 @media (max-width: 576px) {
+  /* Navigation */
+  nav {
+    width: 100%;
+    left: 0;
+    right: 0;
+    border-radius: 8px;
+    padding: 0.6rem 0.6rem;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav a { 
+    font-size: 0.8rem; 
+    padding: 6px 10px; 
+  }
+
+  /* Home Section */
   .f {
     flex-direction: column;
     text-align: center;
-    padding: 20px;
+    padding: 20px 12px;
+    gap: 15px;
+    min-height: auto;
   }
 
-  .home-img {
-    max-width: 220px;
-    margin: 0 auto;
+  .home-img { max-width: 200px; margin: 10px auto; }
+  .home-img img { width: 180px; height: 280px; object-fit: cover; }
+
+  #home h1 { 
+    font-size: 1.5rem; 
+    margin-bottom: 0.5em;
+  }
+  #home h2 { font-size: 1.1rem; }
+  #home p  { font-size: 0.85rem; }
+  
+  #home button {
+    font-size: 0.85rem;
+    padding: 10px 20px;
+  }
+  
+  .icon { 
+    font-size: 1.4rem; 
+    gap: 15px; 
   }
 
-  #home h1 { font-size: 2.2rem; }
-  #home p { font-size: 1.1rem; }
+  /* Sections */
+  section { 
+    padding: 80px 12px 30px; 
+    border-radius: 15px;
+  }
 
-  .icon { font-size: 1.6rem; gap: 25px; }
+  #about h2, #skills h2, #projects h2, #Certifecate h2, #contact h2 {
+    font-size: 1.4rem;
+  }
+
+  #about p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .skill-name { 
+    font-size: 0.95rem; 
+  }
+
+  .percentage {
+    font-size: 0.85rem;
+  }
+
+  /* Project Cards */
+  .project { 
+    width: calc(100% - 20px); 
+    margin: 10px auto; 
+  }
+  .project h3 { 
+    font-size: 1rem; 
+    line-height: 1.2; 
+  }
+  .project p { 
+    font-size: 0.8rem; 
+  }
+
+  input, textarea {
+    font-size: 0.9rem;
+    padding: 10px;
+    margin-bottom: 12px;
+  }
+
+  button[type="submit"] {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
 }
 
-/* TABLET */
-@media (min-width: 577px) and (max-width: 768px) {
+/* TABLET (Small Tablets & Large Phones) */
+@media (min-width: 577px) and (max-width: 900px) {
+  nav {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    border-radius: 12px;
+    padding: 0.7rem 1rem;
+    gap: 12px;
+  }
+
+  nav a { 
+    font-size: 0.95rem; 
+    padding: 8px 12px; 
+  }
+
   .f {
     flex-direction: column;
     text-align: center;
-    padding: 30px;
+    padding: 35px 20px;
+    gap: 25px;
   }
 
-  .home-img {
-    max-width: 280px;
-    margin: 0 auto;
+  .home-img { max-width: 280px; margin: 0 auto; }
+  .home-img img { width: 240px; height: 340px; object-fit: cover; }
+
+  #home h1 { 
+    font-size: 2.1rem; 
+  }
+  #home h2 {
+    font-size: 1.4rem;
+  }
+  #home p { 
+    font-size: 1rem; 
+  }
+
+  #home button {
+    font-size: 0.95rem;
+    padding: 11px 24px;
+  }
+
+  section { 
+    padding: 100px 20px 50px; 
+  }
+
+  #about h2, #skills h2, #projects h2, #Certifecate h2, #contact h2 {
+    font-size: 1.8rem;
+  }
+
+  #about p {
+    font-size: 0.95rem;
+  }
+
+  .skill-name { 
+    font-size: 1.05rem; 
+  }
+
+  /* Projects / Certificates - 2 columns on tablet */
+  .project { width: calc(50% - 20px); }
+  .project h3 { 
+    font-size: 1.2rem; 
+  }
+  .project p { 
+    font-size: 0.9rem; 
   }
 }
 
-/* LAPTOP */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .home-img {
-    max-width: 320px;
+/* LAPTOP (Standard Laptops) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  nav { 
+    width: 70%; 
+    left: 15%; 
+    right: 15%; 
+    border-radius: 14px;
+    padding: 0.8rem 1.5rem;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+
+  .f { 
+    padding: 50px; 
+    gap: 40px; 
+  }
+
+  .home-img { max-width: 330px; }
+  .home-img img { width: 290px; height: 410px; object-fit: cover; }
+
+  #home h1 { 
+    font-size: 2.6rem; 
+  }
+  #home h2 {
+    font-size: 1.5rem;
+  }
+  #home p {
+    font-size: 1.1rem;
+  }
+
+  section { 
+    padding: 120px 30px 60px; 
+  }
+
+  #about h2, #skills h2, #projects h2, #Certifecate h2, #contact h2 {
+    font-size: 2rem;
+  }
+
+  #about p {
+    font-size: 1rem;
+  }
+
+  .skill-name { 
+    font-size: 1.1rem; 
+  }
+
+  /* Laptop: 3-column layout */
+  .project { width: calc(33.333% - 20px); }
+  .project h3 { 
+    font-size: 1.3rem; 
+  }
+  .project p { 
+    font-size: 0.95rem; 
   }
 }
 
-/* DESKTOP */
-@media (min-width: 1025px) and (max-width: 1440px) {
-  /* Desktop uses default CSS (no override needed) */
-}
+/* DESKTOP (Large Screens & Above) */
+@media (min-width: 1201px) {
+  nav { 
+    width: 50%; 
+    left: 25%; 
+    right: 25%;
+    padding: 1rem 2rem;
+  }
 
-/* LARGE COMPUTER / 4K */
-@media (min-width: 1441px) {
-  .home-img {
-    max-width: 400px;
+  nav a {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  .f { 
+    padding: 60px; 
+    gap: 40px; 
+  }
+
+  .home-img { max-width: 400px; }
+  .home-img img { width: 360px; height: 480px; object-fit: cover; }
+
+  #home h1 { 
+    font-size: 3rem; 
+  }
+  #home h2 {
+    font-size: 1.6rem;
+  }
+  #home p { 
+    font-size: 1.3rem; 
+  }
+
+  #home button {
+    font-size: 1rem;
+    padding: 12px 28px;
+  }
+
+  section { 
+    padding: 120px 40px 60px; 
+  }
+
+  #about h2, #skills h2, #projects h2, #Certifecate h2, #contact h2 {
+    font-size: 2.2rem;
+  }
+
+  #about p {
+    font-size: 1.1rem;
+  }
+
+  .skill-name { 
+    font-size: 1.1rem; 
+  }
+
+  .percentage {
+    font-size: 1rem;
+  }
+
+  /* Desktop: 5-column layout for projects */
+  .project { width: calc(20% - 20px); }
+  .project h3 { 
+    font-size: 1.25rem; 
+  }
+  .project p { 
+    font-size: 0.95rem; 
   }
 }
