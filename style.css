@@ -234,8 +234,14 @@
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      justify-content: center;
+      justify-content: center; 
     }
+    #Certifecate .project img {
+  width: 100%;
+  height: 220px;       /* Medium fixed height */
+  object-fit:fill;   /* Prevent stretching */
+  display: block;
+}
 
     .project {
       background: rgba(255,255,255,0.05);
